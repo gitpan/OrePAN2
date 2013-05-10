@@ -1,0 +1,96 @@
+{
+   "abstract" : "Yet another DarkPAN manager.",
+   "author" : [
+      "tokuhirom <tokuhirom@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v0.4.2",
+   "license" : "perl_5",
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "OrePAN2",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
+            "Module::Build" : "0.38"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.2"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Archive::Extract" : "0.68",
+            "Archive::Tar" : "0",
+            "CPAN::Meta" : "0",
+            "File::Temp" : "0",
+            "File::pushd" : "0",
+            "Getopt::Long" : "0",
+            "HTTP::Tiny" : "0",
+            "Module::Metadata" : "0",
+            "PerlIO::gzip" : "0",
+            "Pod::Usage" : "0",
+            "parent" : "0",
+            "perl" : "5.008005"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.98"
+         }
+      }
+   },
+   "provides" : {
+      "OrePAN2" : {
+         "file" : "lib/OrePAN2.pm",
+         "version" : "0.01"
+      },
+      "OrePAN2::CLI::Indexer" : {
+         "file" : "lib/OrePAN2/CLI/Indexer.pm"
+      },
+      "OrePAN2::CLI::Inject" : {
+         "file" : "lib/OrePAN2/CLI/Inject.pm"
+      },
+      "OrePAN2::Index" : {
+         "file" : "lib/OrePAN2/Index.pm"
+      },
+      "OrePAN2::Indexer" : {
+         "file" : "lib/OrePAN2/Indexer.pm"
+      },
+      "OrePAN2::Injector" : {
+         "file" : "lib/OrePAN2/Injector.pm"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tokuhirom/OrePAN2/issues"
+      },
+      "homepage" : "https://github.com/tokuhirom/OrePAN2",
+      "repository" : {
+         "url" : "git://github.com/tokuhirom/OrePAN2.git",
+         "web" : "https://github.com/tokuhirom/OrePAN2"
+      }
+   },
+   "version" : "0.01"
+}
