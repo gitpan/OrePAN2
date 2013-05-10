@@ -19,15 +19,12 @@ no_index:
   directory:
     - t
     - xt
-    - inc
-    - share
-    - eg
-    - examples
-    - author
+    - tools
+    - test-dist
 provides:
   OrePAN2:
     file: lib/OrePAN2.pm
-    version: 0.01
+    version: 0.02
   OrePAN2::CLI::Indexer:
     file: lib/OrePAN2/CLI/Indexer.pm
     version: 0
@@ -52,6 +49,7 @@ requires:
   Getopt::Long: 0
   HTTP::Tiny: 0
   Module::Metadata: 0
+  Parse::PMFile: 0
   PerlIO::gzip: 0
   Pod::Usage: 0
   parent: 0
@@ -60,4 +58,4 @@ resources:
   bugtracker: https://github.com/tokuhirom/OrePAN2/issues
   homepage: https://github.com/tokuhirom/OrePAN2
   repository: git://github.com/tokuhirom/OrePAN2.git
-version: 0.01
+version: 0.02
