@@ -9,7 +9,7 @@ configure_requires:
   CPAN::Meta::Prereqs: 0
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Minilla/v0.4.2, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Minilla/v0.4.3, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -24,22 +24,17 @@ no_index:
 provides:
   OrePAN2:
     file: lib/OrePAN2.pm
-    version: 0.02
+    version: 0.03
   OrePAN2::CLI::Indexer:
     file: lib/OrePAN2/CLI/Indexer.pm
-    version: 0
   OrePAN2::CLI::Inject:
     file: lib/OrePAN2/CLI/Inject.pm
-    version: 0
   OrePAN2::Index:
     file: lib/OrePAN2/Index.pm
-    version: 0
   OrePAN2::Indexer:
     file: lib/OrePAN2/Indexer.pm
-    version: 0
   OrePAN2::Injector:
     file: lib/OrePAN2/Injector.pm
-    version: 0
 requires:
   Archive::Extract: 0.68
   Archive::Tar: 0
@@ -58,4 +53,4 @@ resources:
   bugtracker: https://github.com/tokuhirom/OrePAN2/issues
   homepage: https://github.com/tokuhirom/OrePAN2
   repository: git://github.com/tokuhirom/OrePAN2.git
-version: 0.02
+version: 0.03

@@ -20,5 +20,6 @@ t/Util.pm
 t/dat/Acme-Foo-0.01.tar.gz
 t/dat/Acme-YakiniQ-0.01.tar.gz
 t/dat/modules/02.packages.txt
+xt/inject-git.t
 META.yml
 MANIFEST
