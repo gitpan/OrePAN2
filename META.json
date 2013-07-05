@@ -60,7 +60,7 @@
    "provides" : {
       "OrePAN2" : {
          "file" : "lib/OrePAN2.pm",
-         "version" : "0.06"
+         "version" : "0.07"
       },
       "OrePAN2::CLI::Indexer" : {
          "file" : "lib/OrePAN2/CLI/Indexer.pm"
@@ -89,7 +89,7 @@
          "web" : "https://github.com/tokuhirom/OrePAN2"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_contributors" : [
       "Shoichi Kaji <skaji@outlook.com>"
    ]

@@ -16,6 +16,7 @@ script/orepan2-inject
 t/00_compile.t
 t/01_indexer.t
 t/02_no_index.t
+t/03_inject.t
 t/Util.pm
 t/cli/indexer.t
 t/dat/Acme-Foo-0.01.tar.gz
