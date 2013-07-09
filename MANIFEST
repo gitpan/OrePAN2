@@ -19,6 +19,7 @@ t/02_no_index.t
 t/03_inject.t
 t/Util.pm
 t/cli/indexer.t
+t/cli/inject-git.t
 t/dat/Acme-Foo-0.01.tar.gz
 t/dat/Acme-YakiniQ-0.01.tar.gz
 t/dat/modules/02.packages.txt

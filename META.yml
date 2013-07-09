@@ -3,6 +3,7 @@ abstract: 'Yet another DarkPAN manager.'
 author:
   - 'tokuhirom <tokuhirom@gmail.com>'
 build_requires:
+  File::Which: 0
   Test::More: 0.98
 configure_requires:
   CPAN::Meta: 0
@@ -24,7 +25,7 @@ no_index:
 provides:
   OrePAN2:
     file: lib/OrePAN2.pm
-    version: 0.07
+    version: 0.08
   OrePAN2::CLI::Indexer:
     file: lib/OrePAN2/CLI/Indexer.pm
   OrePAN2::CLI::Inject:
@@ -52,6 +53,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/OrePAN2/issues
   homepage: https://github.com/tokuhirom/OrePAN2
   repository: git://github.com/tokuhirom/OrePAN2.git
-version: 0.07
+version: 0.08
 x_contributors:
   - 'Shoichi Kaji <skaji@outlook.com>'
+  - 'Masahiro Honma <hiratara@cpan.org>'
