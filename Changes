@@ -1,5 +1,10 @@
 Revision history for Perl extension OrePAN2
 
+0.10 2013-08-01T04:23:57Z
+
+    - Switched to Parse::LocalDistribution instead of Module::Metadata.
+      Module::Metadata can't parse localt distribution correctly.
+
 0.09 2013-08-01T03:10:02Z
 
     [BUG FIX]

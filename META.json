@@ -44,7 +44,7 @@
             "File::pushd" : "0",
             "Getopt::Long" : "2.39",
             "HTTP::Tiny" : "0",
-            "Module::Metadata" : "1.000014",
+            "Parse::LocalDistribution" : "0.01",
             "PerlIO::gzip" : "0",
             "Pod::Usage" : "0",
             "parent" : "0",
@@ -61,7 +61,7 @@
    "provides" : {
       "OrePAN2" : {
          "file" : "lib/OrePAN2.pm",
-         "version" : "0.09"
+         "version" : "0.10"
       },
       "OrePAN2::CLI::Indexer" : {
          "file" : "lib/OrePAN2/CLI/Indexer.pm"
@@ -90,7 +90,7 @@
          "web" : "https://github.com/tokuhirom/OrePAN2"
       }
    },
-   "version" : "0.09",
+   "version" : "0.10",
    "x_contributors" : [
       "Shoichi Kaji <skaji@outlook.com>",
       "Masahiro Honma <hiratara@cpan.org>"
