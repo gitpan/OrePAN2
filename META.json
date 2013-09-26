@@ -4,8 +4,10 @@
       "tokuhirom <tokuhirom@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.6.3",
-   "license" : "perl_5",
+   "generated_by" : "Minilla/v0.6.7",
+   "license" : [
+      "perl_5"
+   ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
@@ -62,7 +64,7 @@
    "provides" : {
       "OrePAN2" : {
          "file" : "lib/OrePAN2.pm",
-         "version" : "0.13"
+         "version" : "0.14"
       },
       "OrePAN2::CLI::Indexer" : {
          "file" : "lib/OrePAN2/CLI/Indexer.pm"
@@ -91,7 +93,7 @@
          "web" : "https://github.com/tokuhirom/OrePAN2"
       }
    },
-   "version" : "0.13",
+   "version" : "0.14",
    "x_contributors" : [
       "Shoichi Kaji <skaji@outlook.com>",
       "Masahiro Honma <hiratara@cpan.org>",
