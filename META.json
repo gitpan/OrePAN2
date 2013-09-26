@@ -64,7 +64,7 @@
    "provides" : {
       "OrePAN2" : {
          "file" : "lib/OrePAN2.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "OrePAN2::CLI::Indexer" : {
          "file" : "lib/OrePAN2/CLI/Indexer.pm"
@@ -93,7 +93,7 @@
          "web" : "https://github.com/tokuhirom/OrePAN2"
       }
    },
-   "version" : "0.14",
+   "version" : "0.15",
    "x_contributors" : [
       "Shoichi Kaji <skaji@outlook.com>",
       "Masahiro Honma <hiratara@cpan.org>",
