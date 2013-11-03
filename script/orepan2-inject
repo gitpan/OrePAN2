@@ -18,7 +18,9 @@ orepan2-inject - Injector
 
 =head1 DESCRIPTION
 
-OrePAN2 injector.
+OrePAN2 injector. This module injects your modules to the OrePAN2 darkpan repository.
+
+You need to run orepan2-indexer script after inject. Index files are required for module installation.
 
 =head1 OPTIONS
 
@@ -37,6 +39,8 @@ orepan2 uses 'DUMMY' as default.
 =back
 
 =head1 SOURCES
+
+orepan2-inject script supports following source types.
 
 =head2 ARCHIVE FILE
 
@@ -59,6 +63,14 @@ You need to setup git repository as a installable git repo.
 You need to put a META.json in your repository.
 
 If you are using Minilla or Milla, your repository is already ready to install.
+
+OrePAN2::Inject supports following URL types:
+
+    git+file://path/to/repo.git
+    git://github.com/plack/Plack.git@1.0000        # tag
+    git://github.com/plack/Plack.git@devel         # branch
+
+It's compatible with cpanm.
 
 =head2 Module name
 

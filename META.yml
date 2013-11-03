@@ -10,7 +10,7 @@ configure_requires:
   CPAN::Meta::Prereqs: 0
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Minilla/v0.6.7, CPAN::Meta::Converter version 2.132661'
+generated_by: 'Minilla/v0.8.1, CPAN::Meta::Converter version 2.132510'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,7 +25,7 @@ no_index:
 provides:
   OrePAN2:
     file: lib/OrePAN2.pm
-    version: 0.15
+    version: 0.16
   OrePAN2::CLI::Indexer:
     file: lib/OrePAN2/CLI/Indexer.pm
   OrePAN2::CLI::Inject:
@@ -54,8 +54,9 @@ resources:
   bugtracker: https://github.com/tokuhirom/OrePAN2/issues
   homepage: https://github.com/tokuhirom/OrePAN2
   repository: git://github.com/tokuhirom/OrePAN2.git
-version: 0.15
+version: 0.16
 x_contributors:
   - 'Shoichi Kaji <skaji@outlook.com>'
   - 'Masahiro Honma <hiratara@cpan.org>'
   - 'Chad Granum <exodist7@gmail.com>'
+  - 'Masayuki Matsuki <y.songmu@gmail.com>'

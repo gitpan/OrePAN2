@@ -3,7 +3,7 @@ use 5.008005;
 use strict;
 use warnings;
 
-our $VERSION = "0.15";
+our $VERSION = "0.16";
 
 1;
 __END__
@@ -64,6 +64,10 @@ OrePAN1 coded a lot of things by itself. OrePAN2 delegates most of things to oth
 OrePAN1 is now in maintenance phase. But OrePAN2 is still in actively development.
 
 =back
+
+=head1 SEE ALSO
+
+L<OrePAN2::Server>
 
 =head1 LICENSE
 
