@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use utf8;
 use OrePAN2;
-use IO::Compress::Gzip ('$GzipError');
+use IO::Uncompress::Gunzip ('$GunzipError');
 
 use Class::Accessor::Lite 0.05 (
     rw => [qw(no_mtime)],
@@ -13,20 +13,19 @@ sub new {
     my $class = shift;
     my %args = @_==1 ? %{$_[0]} : @_;
     bless {
-        index => [],
+        index => {},
         no_mtime => 0,
     }, $class;
 }
 
 sub load {
-    my ($class, $fname) = @_;
-
-    my $self = $class->new();
+    my ($self, $fname, $opts) = @_;
+    $opts ||= {};
 
     my $fh = do {
         if ($fname =~ /\.gz\z/) {
-            IO::Compress::Gzip->new($fname)
-                or die "gzip failed: $GzipError\n";
+            IO::Uncompress::Gunzip->new($fname)
+                or die "gzip failed: $GunzipError\n";
         } else {
             open my $fh, '<', $fname
                 or Carp::croak("Cannot open '$fname' for reading: $!");
@@ -39,29 +38,47 @@ sub load {
         last unless /\S/;
     }
 
+    my $method = $opts->{replace} ? 'replace_index' : 'add_index';
     while (<$fh>) {
         if (/^(\S+)\s+(\S+)\s+(.*)$/) {
-            push @{$self->{index}}, [$1,$2 eq 'undef' ? undef : $2,$3];
+           $self->$method($1,$2 eq 'undef' ? undef : $2,$3);
         }
     }
 
     close $fh;
-
-    return $self;
 }
 
 sub lookup {
     my ($self, $package) = @_;
-    for (@{$self->{index}}) {
-        return ($_->[1], $_->[2]) if $_->[0] eq $package;
+    if (my $entry = $self->{index}->{$package}) {
+        return @$entry;
     }
     return;
+}
+
+sub packages {
+    my ($self) = @_;
+    sort { $a cmp $b } keys %{$self->{index}};
+}
+
+sub delete_index {
+    my ($self, $package) = @_;
+    delete $self->{index}->{$package};
+    return;
+}
+
+sub replace_index {
+    my ($self, $package, $version, $archive_file) = @_;
+    $self->{index}->{$package} = [$version, $archive_file];
 }
 
 sub add_index {
     my ($self, $package, $version, $archive_file) = @_;
 
-    push @{$self->{index}}, [$package, $version, $archive_file];
+    if ($self->{index}{$package}) {
+        Carp::croak("${package} is already indexed.");
+    }
+    $self->{index}->{$package} = [$version, $archive_file];
 }
 
 sub as_string {
@@ -76,14 +93,15 @@ sub as_string {
         'Columns:      package name, version, path',
         'Intended-For: Automated fetch routines, namespace documentation.',
         "Written-By:   OrePAN2 $OrePAN2::VERSION",
-        "Line-Count:   @{[ scalar(@{$self->{index}}) ]}",
+        "Line-Count:   @{[ scalar(keys %{$self->{index}}) ]}",
         (!$self->{no_mtime} ? "Last-Updated: @{[ scalar localtime ]}" : ()),
         '',
     );
 
-    for my $row (sort { $a->[0] cmp $b->[0] } @{$self->{index}}) {
+    for my $pkg ($self->packages) {
+        my $entry = $self->{index}{$pkg};
         # package name, version, path
-        push @buf, sprintf "%-22s %-22s %s", $row->[0], $row->[1] || 'undef', $row->[2];
+        push @buf, sprintf "%-22s %-22s %s", $pkg, $entry->[0] || 'undef', $entry->[1];
     }
     return join("\n", @buf) . "\n";
 }
@@ -105,7 +123,7 @@ This is a module to manipulate 02packages.details.txt.
 
 =item C<< my $index = OrePAN2::Index->new(%attr) >>
 
-=item C<< my $index = OrePAN2::Index->load($filename) >>
+=item C<< $index->load($filename) >>
 
 Load existing 02.packages.details.txt
 
