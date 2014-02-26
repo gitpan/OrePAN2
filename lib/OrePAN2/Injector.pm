@@ -36,11 +36,11 @@ sub inject {
         my ($uri, $commitish) = split /(?<=\.git)@/i, $source, 2;
         # git CLI doesn't support git+http:// etc.
         $uri =~ s/^git\+//;
-        $self->inject_from_git($uri, $commitish);
+        return $self->inject_from_git($uri, $commitish);
     } elsif ($source =~ m{\Ahttps?://}) {
-        $self->inject_from_http($source);
+        return $self->inject_from_http($source);
     } elsif (-f $source) {
-        $self->inject_from_file($source);
+        return $self->inject_from_file($source);
     }
     elsif ( $source =~ m/^[\w_][\w0-9:_]+$/ ) {
 
@@ -56,7 +56,7 @@ sub inject {
         my $url = $rel->{download_url}
             || die "Could not find url for $source";
 
-        $self->inject_from_http($url);
+        return $self->inject_from_http($url);
     }
     else {
         die "Unknown source: $source\n";
@@ -66,10 +66,11 @@ sub inject {
 sub tarpath {
     my ($self, $basename) = @_;
 
+    my $author = uc($self->{author});
     my $tarpath = File::Spec->catfile($self->directory, 'authors', 'id',
-        substr($self->{author}, 0, 1),
-        substr($self->{author}, 0, 2),
-        $self->{author},
+        substr($author, 0, 1),
+        substr($author, 0, 2),
+        $author,
         $basename);
     mkpath(dirname($tarpath));
 
@@ -85,7 +86,7 @@ sub inject_from_file {
     copy($file, $tarpath)
         or die "Copy failed $file $tarpath: $!\n";
 
-    print "Wrote $tarpath from $file\n";
+    return $tarpath;
 }
 
 sub inject_from_http {
@@ -100,7 +101,7 @@ sub inject_from_http {
         die "Cannot fetch $url($response->{status} $response->{reason})\n";
     }
 
-    print "Wrote $tarpath from $url\n";
+    return $tarpath;
 }
 
 sub inject_from_git {
@@ -145,7 +146,7 @@ sub inject_from_git {
     unlink $tarpath if -f $tarpath;
     rename $tmp_tarpath => $tarpath;
 
-    printf "Wrote $tarpath\n";
+    return $tarpath;
 }
 
 sub list_files {
