@@ -20,9 +20,12 @@ t/03_inject.t
 t/Util.pm
 t/cli/indexer.t
 t/cli/inject-git.t
+t/dat/02.packages.details.txt
+t/dat/02.packages.details.txt.gz
 t/dat/Acme-Foo-0.01.tar.gz
 t/dat/Acme-YakiniQ-0.01.tar.gz
 t/dat/modules/02.packages.txt
+t/index.t
 xt/inject-git.t
 xt/inject-spiffy-from-cpan.t
 META.yml
