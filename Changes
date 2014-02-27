@@ -1,5 +1,10 @@
 Revision history for Perl extension OrePAN2
 
+0.24 2014-02-27T20:50:53Z
+
+    - Added OrePAN2::Repository
+      (tokuhirom)
+
 0.23 2014-02-27T19:01:17Z
 
     - Fixed testing issue

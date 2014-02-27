@@ -10,6 +10,8 @@ lib/OrePAN2/CLI/Inject.pm
 lib/OrePAN2/Index.pm
 lib/OrePAN2/Indexer.pm
 lib/OrePAN2/Injector.pm
+lib/OrePAN2/Repository.pm
+lib/OrePAN2/Repository/Cache.pm
 minil.toml
 script/orepan2-indexer
 script/orepan2-inject
@@ -17,6 +19,7 @@ t/00_compile.t
 t/01_indexer.t
 t/02_no_index.t
 t/03_inject.t
+t/04_repository.t
 t/Util.pm
 t/cli/indexer.t
 t/cli/inject-git.t

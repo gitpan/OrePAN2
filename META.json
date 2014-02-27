@@ -66,7 +66,7 @@
    "provides" : {
       "OrePAN2" : {
          "file" : "lib/OrePAN2.pm",
-         "version" : "0.23"
+         "version" : "0.24"
       },
       "OrePAN2::CLI::Indexer" : {
          "file" : "lib/OrePAN2/CLI/Indexer.pm"
@@ -82,6 +82,12 @@
       },
       "OrePAN2::Injector" : {
          "file" : "lib/OrePAN2/Injector.pm"
+      },
+      "OrePAN2::Repository" : {
+         "file" : "lib/OrePAN2/Repository.pm"
+      },
+      "OrePAN2::Repository::Cache" : {
+         "file" : "lib/OrePAN2/Repository/Cache.pm"
       }
    },
    "release_status" : "stable",
@@ -95,7 +101,7 @@
          "web" : "https://github.com/tokuhirom/OrePAN2"
       }
    },
-   "version" : "0.23",
+   "version" : "0.24",
    "x_contributors" : [
       "Shoichi Kaji <skaji@outlook.com>",
       "Masahiro Honma <hiratara@cpan.org>",
