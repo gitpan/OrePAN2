@@ -1,5 +1,10 @@
 Revision history for Perl extension OrePAN2
 
+0.22 2014-02-27T07:04:18Z
+
+    - Use IO::Zlib instead of PerlIO::gzip.
+      (tokuhirom)
+
 0.21 2014-02-26T09:47:32Z
 
     - OrePAN2::Indexer: Make temporary file in the same parition.
