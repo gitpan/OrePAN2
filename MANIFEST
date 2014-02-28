@@ -13,8 +13,10 @@ lib/OrePAN2/Injector.pm
 lib/OrePAN2/Repository.pm
 lib/OrePAN2/Repository/Cache.pm
 minil.toml
+script/orepan2-gc
 script/orepan2-indexer
 script/orepan2-inject
+script/orepan2-merge-index
 t/00_compile.t
 t/01_indexer.t
 t/02_no_index.t
@@ -22,8 +24,10 @@ t/03_inject.t
 t/04_repository.t
 t/05_cache.t
 t/Util.pm
+t/cli/gc.t
 t/cli/indexer.t
 t/cli/inject-git.t
+t/cli/merge-index.t
 t/dat/02.packages.details.txt
 t/dat/02.packages.details.txt.gz
 t/dat/Acme-Foo-0.01.tar.gz
