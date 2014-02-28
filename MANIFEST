@@ -20,6 +20,7 @@ t/01_indexer.t
 t/02_no_index.t
 t/03_inject.t
 t/04_repository.t
+t/05_cache.t
 t/Util.pm
 t/cli/indexer.t
 t/cli/inject-git.t
