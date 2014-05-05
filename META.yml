@@ -3,18 +3,16 @@ abstract: 'Yet another DarkPAN manager.'
 author:
   - 'tokuhirom <tokuhirom@gmail.com>'
 build_requires:
-  File::Which: 0
-  Test::More: 0.98
+  File::Which: '0'
+  Test::More: '0.98'
 configure_requires:
-  CPAN::Meta: 0
-  CPAN::Meta::Prereqs: 0
-  Module::Build: 0.38
+  Module::Build::Tiny: '0.035'
 dynamic_config: 0
-generated_by: 'Minilla/v0.11.0, CPAN::Meta::Converter version 2.133380'
+generated_by: 'Minilla/v0.15.1, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: OrePAN2
 no_index:
   directory:
@@ -25,7 +23,7 @@ no_index:
 provides:
   OrePAN2:
     file: lib/OrePAN2.pm
-    version: 0.29
+    version: '0.30'
   OrePAN2::CLI::Indexer:
     file: lib/OrePAN2/CLI/Indexer.pm
   OrePAN2::CLI::Inject:
@@ -41,33 +39,35 @@ provides:
   OrePAN2::Repository::Cache:
     file: lib/OrePAN2/Repository/Cache.pm
 requires:
-  Archive::Extract: 0.68
-  Archive::Tar: 0
-  CPAN::Meta: 2.13156
-  Class::Accessor::Lite: 0.05
-  Digest::MD5: 0
-  File::Path: 0
-  File::Temp: 0
-  File::pushd: 0
-  Getopt::Long: 2.39
-  HTTP::Tiny: 0
-  IO::File::AtomicChange: 0
-  IO::Uncompress::Gunzip: 0
-  IO::Zlib: 0
-  JSON::PP: 0
-  MetaCPAN::API: 0.43
-  Parse::LocalDistribution: 0.01
-  Pod::Usage: 0
-  parent: 0
-  perl: 5.008005
+  Archive::Extract: '0.68'
+  Archive::Tar: '0'
+  CPAN::Meta: '2.13156'
+  Class::Accessor::Lite: '0.05'
+  Digest::MD5: '0'
+  File::Path: '0'
+  File::Temp: '0'
+  File::pushd: '0'
+  Getopt::Long: '2.39'
+  HTTP::Tiny: '0'
+  IO::File::AtomicChange: '0'
+  IO::Uncompress::Gunzip: '0'
+  IO::Zlib: '0'
+  JSON::PP: '0'
+  MetaCPAN::API: '0.43'
+  Parse::LocalDistribution: '0.11'
+  Pod::Usage: '0'
+  parent: '0'
+  perl: '5.008005'
 resources:
   bugtracker: https://github.com/tokuhirom/OrePAN2/issues
   homepage: https://github.com/tokuhirom/OrePAN2
   repository: git://github.com/tokuhirom/OrePAN2.git
-version: 0.29
+version: '0.30'
 x_contributors:
   - 'Shoichi Kaji <skaji@outlook.com>'
   - 'Masahiro Honma <hiratara@cpan.org>'
   - 'Chad Granum <exodist7@gmail.com>'
   - 'Songmu <y.songmu@gmail.com>'
   - 'moznion <moznion@gmail.com>'
+  - 'Olaf Alders <olaf@wundersolutions.com>'
+  - 'Ichito Nagata <i.nagata110@gmail.com>'
