@@ -72,7 +72,7 @@
    "provides" : {
       "OrePAN2" : {
          "file" : "lib/OrePAN2.pm",
-         "version" : "0.31"
+         "version" : "0.32"
       },
       "OrePAN2::CLI::Indexer" : {
          "file" : "lib/OrePAN2/CLI/Indexer.pm"
@@ -107,7 +107,8 @@
          "web" : "https://github.com/tokuhirom/OrePAN2"
       }
    },
-   "version" : "0.31",
+   "version" : "0.32",
+   "x_authority" : "cpan:TOKUHIROM",
    "x_contributors" : [
       "Shoichi Kaji <skaji@outlook.com>",
       "Masahiro Honma <hiratara@cpan.org>",
@@ -116,6 +117,7 @@
       "moznion <moznion@gmail.com>",
       "Ichito Nagata <i.nagata110@gmail.com>",
       "Tatsuhiko Miyagawa <miyagawa@bulknews.net>",
+      "Ivan Bessarabov <ivan@bessarabov.ru>",
       "Olaf Alders <olaf@wundersolutions.com>"
    ]
 }
