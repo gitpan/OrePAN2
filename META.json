@@ -49,6 +49,7 @@
             "Getopt::Long" : "2.39",
             "HTTP::Tiny" : "0",
             "IO::File::AtomicChange" : "0",
+            "IO::Socket::SSL" : "1.42",
             "IO::Uncompress::Gunzip" : "0",
             "IO::Zlib" : "0",
             "JSON::PP" : "0",
@@ -72,7 +73,7 @@
    "provides" : {
       "OrePAN2" : {
          "file" : "lib/OrePAN2.pm",
-         "version" : "0.32"
+         "version" : "0.33"
       },
       "OrePAN2::CLI::Indexer" : {
          "file" : "lib/OrePAN2/CLI/Indexer.pm"
@@ -107,7 +108,7 @@
          "web" : "https://github.com/tokuhirom/OrePAN2"
       }
    },
-   "version" : "0.32",
+   "version" : "0.33",
    "x_authority" : "cpan:TOKUHIROM",
    "x_contributors" : [
       "Shoichi Kaji <skaji@outlook.com>",
