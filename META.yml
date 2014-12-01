@@ -24,7 +24,7 @@ no_index:
 provides:
   OrePAN2:
     file: lib/OrePAN2.pm
-    version: '0.34'
+    version: '0.35'
   OrePAN2::CLI::Indexer:
     file: lib/OrePAN2/CLI/Indexer.pm
   OrePAN2::CLI::Inject:
@@ -69,7 +69,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/OrePAN2/issues
   homepage: https://github.com/tokuhirom/OrePAN2
   repository: git://github.com/tokuhirom/OrePAN2.git
-version: '0.34'
+version: '0.35'
 x_authority: cpan:TOKUHIROM
 x_contributors:
   - 'Shoichi Kaji <skaji@outlook.com>'
