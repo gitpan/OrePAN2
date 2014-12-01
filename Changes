@@ -1,5 +1,10 @@
 Revision history for Perl extension OrePAN2
 
+0.34 2014-12-01T14:21:15Z
+
+    - If two packages have the same version, the one which is last in will be preferred (oalders)
+    - OrePAN2::Indexer::make_index() now returns an OrePAN2::Index object (oalders)
+
 0.33 2014-11-22T00:38:07Z
 
     - Add IO::Socket::SSL to dependencies (Ivan Bessarabov)
@@ -80,13 +85,13 @@ Revision history for Perl extension OrePAN2
 0.18 2014-02-26T00:30:30Z
 
     [INCOMPATIBLE CHANGE]
-    - OrePAN2::Inject#inject_from_* returns the tar ball path from darkpan root.
+    - OrePAN2::Inject#inject_from_* returns the tarball path from darkpan root.
       (tokuhirom)
 
 0.17 2014-02-26T00:19:04Z
 
-    - OrePAN2::Inject#inject_from_* returns the tar ball path.
-      Previous version prints the tar ball path in the module.
+    - OrePAN2::Inject#inject_from_* returns the tarball path.
+      Previous version prints the tarball path in the module.
       (tokuhirom)
 
 0.16 2013-11-03T10:17:24Z
